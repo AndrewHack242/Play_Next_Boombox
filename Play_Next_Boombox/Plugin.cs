@@ -10,7 +10,7 @@ namespace Play_Next_Boombox
     {
         private const string mod_GUID = "Hackattack242.Play_Next_Boombox";
         private const string mod_name = "Play_Next_Boombox";
-        private const string mod_version = "1.0.0";
+        private const string mod_version = "1.0.1";
 
         private readonly Harmony harmony = new Harmony(mod_GUID);
 
@@ -31,6 +31,8 @@ namespace Play_Next_Boombox
             logger.LogInfo("Play Next Boombox has awoken");
 
             harmony.PatchAll();
+
+            logger.LogInfo("Patches Complete");
         }
 
         internal static void LogDebug(string message)
